@@ -19,26 +19,26 @@ const Home = () => {
     const navigate = useNavigate();
 
     //nlp.js
-    const handleNlpSubmit = () => {
-      fetch('http://localhost:5000/api/nlp', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ text: inputText }),
-      })
-      .then(response => response.json())
-      .then(data => {
-          console.log("Received NLP response:", data); // Log the received NLP response
-          setNlpResponse(data.response);
-          console.log(nlpResponse.intent)
-          if (nlpResponse.intent === 'greetings.bye'){
-            setNlpResponse("")
-            navigate("/wishlist")
-          }
-      })
-      .catch(error => console.error('Error:', error));
-  };
+//     const handleNlpSubmit = () => {
+//       fetch('http://localhost:5000/api/nlp', {
+//           method: 'POST',
+//           headers: {
+//               'Content-Type': 'application/json',
+//           },
+//           body: JSON.stringify({ text: inputText }),
+//       })
+//       .then(response => response.json())
+//       .then(data => {
+//           console.log("Received NLP response:", data); // Log the received NLP response
+//           setNlpResponse(data.response);
+//           console.log(nlpResponse.intent)
+//           if (nlpResponse.intent === 'greetings.bye'){
+//             setNlpResponse("")
+//             navigate("/wishlist")
+//           }
+//       })
+//       .catch(error => console.error('Error:', error));
+//   };
   
 
     useEffect(() => {
