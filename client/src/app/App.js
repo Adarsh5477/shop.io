@@ -24,7 +24,8 @@ import TalkAI from '../routes/TalkAI';
 import Checkout from '../routes/Checkout';
 import React from 'react';
 function App() {
-  const [chatHistory, setChatHistory] = React.useState([]);
+  
+  const [chatHistory, setChatHistory] = React.useState([{ sender: "ShopGenie", message: `Hi, I am ShopGenie. How can I help you?` }]);
   return (
    <CartItemsProvider>
       <WishItemsProvider>

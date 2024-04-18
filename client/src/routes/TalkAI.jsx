@@ -58,7 +58,7 @@ const TalkAI = (props) => {
       setTimeout(() => {
         props.setChatHistory((prevChatHistory) => [
           ...prevChatHistory,
-          { sender: "AI", message: `${res.message.content}` },
+          { sender: "ShopGenie", message: `${res.message.content}` },
         ]);
         // Update productData with the search results
         const searchResults = JSON.parse(window.sessionStorage.getItem("searchedProducts"));
@@ -166,7 +166,7 @@ const TalkAI = (props) => {
               }}
             >
               <Typography variant="body1" sx={{ fontWeight: 600 }}>
-                {chat.sender === "user" ? "You" : "AI"}:
+                {chat.sender === "user" ? "You" : "ShopGenie"}:
               </Typography>
               <Typography variant="body1">{chat.message}</Typography>
             </div>

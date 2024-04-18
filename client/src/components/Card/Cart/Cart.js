@@ -37,13 +37,27 @@ const Cart = () => {
 
     const cartItems = useContext(CartItemsContext);
 
-    const handleCheckout = async () => {
-        if(cartItems.totalAmount > 0){
-            const config = {
-                reason: 'checkout',
-                amount: cartItems.totalAmount
-            }
-        navigateTo("/checkout")
+  // Function to show toast
+const showToast = (message) => {
+    // Replace this with your toast implementation
+    alert(message);
+}
+
+// Function to handle checkout
+const handleCheckout = async () => {
+    if (cartItems.totalAmount > 0) {
+        const config = {
+            reason: 'checkout',
+            amount: cartItems.totalAmount
+        };
+        // Open the payment page in a new tab
+        window.open("https://checkout.chapa.co/checkout/web/payment/PL-si1gChSUKbHX", "_blank");
+
+        // Prompt user after the payment page is closed
+        window.alert("Order shipped successfully");
+      
+        
+        // You can proceed with additional actions based on user input
         // await axios.post("http://localhost:5000/api/payment", config)
         //     .then((res) => {
         //             console.log(res.data)
@@ -52,11 +66,12 @@ const Cart = () => {
         //         }
         //     )
         //     .catch((err) => console.log(err))
-        }
-        else {
-            return
-        }
+    } else {
+        return;
     }
+};
+
+    
 
     return (
         <Fragment>
@@ -109,3 +124,4 @@ const Cart = () => {
 }
  
 export default Cart;
+

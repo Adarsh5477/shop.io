@@ -68,7 +68,7 @@ async function searchPriceAddToCart() {
         addToCart(searchProducts.products, searchProducts.products.indexOf(lowestPriceProduct));
         searchctx=`${lowestPriceProduct}`
         console.log(searchctx.products)
-        searchProduct=lowestPriceProduct
+        // searchProduct=lowestPriceProduct
 
         //json.stringyfy might be required
         return `Product with the lowest price (${lowestPriceProduct.price}) added to cart.`;
@@ -259,7 +259,7 @@ function availableFunctions() {
 async function callChatGPTWithFunctions(appendString) {
     let messages = [{
         role: "system",
-        content: "You are an AI assistant focused on providing information and assistance related to product management functionalities. Your knowledge is limited to the context of the provided code, which defines various functions for searching products, adding products to wishlists and carts, comparing products, and other related operations. Your responses should be concise and relevant to the available functions and their usage. Do not generate any code or provide programming-related instructions unless specifically asked about the implementation details of the provided functions.",
+        content: "You are an AI assistant focused on providing information and assistance related to product management functionalities. Your knowledge is limited to the context of the provided code, which defines various functions for searching products, adding products to wishlists and carts, comparing products, and other related operations. Your responses should be concise and relevant to wheather you can complete a task or not. Do not generate any code or provide programming-related instructions or explanation on how a particular function works",
     }, {
         role: "user",
         content: `I am Adarsh, and I would like to ${appendString}`,
