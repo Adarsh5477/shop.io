@@ -68,6 +68,9 @@ async function searchPriceAddToCart() {
         addToCart(searchProducts.products, searchProducts.products.indexOf(lowestPriceProduct));
         searchctx=`${lowestPriceProduct}`
         console.log(searchctx.products)
+        searchProduct=lowestPriceProduct
+
+        //json.stringyfy might be required
         return `Product with the lowest price (${lowestPriceProduct.price}) added to cart.`;
     } else {
         return "No products found to add to the cart.";
@@ -106,6 +109,9 @@ async function searchRatingAddToWishlist() {
         const highestRatedProduct = sortedProducts[0];
         addToWishlist(searchProducts.products, searchProducts.products.indexOf(highestRatedProduct));
         searchctx=`${highestRatedProduct}`
+        //
+
+        //
         return `Product with the highest rating (${highestRatedProduct.rating}) added to wishlist.`;
         
 
@@ -568,6 +574,7 @@ async function callChatGPTWithFunctions(appendString) {
         if (chat.choices[0].message.function_call.name === "searchPriceAddToCart") {
             content = await searchPriceAddToCart();
             window.sessionStorage.setItem("searchctx", JSON.stringify(searchctx));
+            window.sessionStorage.setItem("searchedProducts", JSON.stringify(searchProducts));
 
             messages.push(chat.choices[0].message);
             messages.push({
