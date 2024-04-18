@@ -43,9 +43,9 @@ const Home = () => {
 
     useEffect(() => {
         // Call the handleNlpSubmit function once when the component mounts
-        console.log("test123")
-        handleNlpSubmit();
-        console.log(nlpResponse);
+        // console.log("test123")
+        // handleNlpSubmit();
+        // console.log(nlpResponse);
  
         // Fetch featured items
         axios.get("https://shema-backend.vercel.app/api/items")
