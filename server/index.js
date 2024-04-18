@@ -105,5 +105,9 @@ app.use('/api/payment', cors(), require("./routes/payment"));
 app.post('/openai', async (req, res) =>{
   
 })
+app.get('/', async (req, res) =>{
+  res.send("running");
+})
+
 
 app.listen(PORT, console.log("Server is running on port ", PORT));
