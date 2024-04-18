@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Test Server for SHEMA",
   "proxy": "http://localhost:3000/1 ",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server",
+    "start": "node index",
     "dev": "nodemon server"
   },
   "author": "Bereket Lemma",
