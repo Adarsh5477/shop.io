@@ -10,13 +10,13 @@ import { CartItemsContext } from "../Context/CartItemsContext";
 import { getLinearProgressUtilityClass } from "@mui/material";
 import back_ground_logo from "../asset/img/back_ground_logo.png"
 const TalkAI = (props) => {
-  const searchctxString = window.sessionStorage.getItem("searchctx");
+  // const searchctxString = window.sessionStorage.getItem("searchctx");
 
 // Parse the JSON string into an object
-const searchctx = JSON.parse(searchctxString);
+// const searchctx = JSON.parse(searchctxString);
 
 // Log the parsed object
-console.log(searchctx);
+// console.log(searchctx);
 
   const [open, setOpen] = useState(true);
   const [inputValue, setInputValue] = useState("");

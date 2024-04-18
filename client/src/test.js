@@ -221,7 +221,7 @@ function availableFunctions() {
     }
     searchctx={}
 
-    searchctx=`${JSON.parse(lowestPriceProduct)},${ secondLowestPriceProduct}`
+    // searchctx=`${JSON.parse(lowestPriceProduct)},${ secondLowestPriceProduct}`
        
     console.log(searchctx)
     return result;
@@ -246,7 +246,7 @@ function availableFunctions() {
       result += compareProducts(highestRatedProduct, secondHighestRatedProduct);
     }
     searchctx={}
-    searchctx=`${highestRatedProduct},${ secondHighestRatedProduct}`
+    // searchctx=`${highestRatedProduct},${ secondHighestRatedProduct}`
     return result;
   }
 // Define your ChatGPT Function
