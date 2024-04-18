@@ -7,7 +7,9 @@ const PORT = process.env.PORT || 5000;
 
 // CORS middleware
 app.use(cors());
-
+app.get('/', async (req, res) =>{
+  res.send("running");
+})
 // Other middleware and routes
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -47,7 +49,7 @@ manager.addDocument('en', 'Add [product] to my wishlist', 'wishlist.add');
 manager.addDocument('en', 'Add [product] to my cart', 'cart.add');
 
 // Train the NLP manager
-manager.train();
+//manager.train();
 
 //"find me a $color$*red*"item
 // NLP endpoint
@@ -105,9 +107,7 @@ app.use('/api/payment', cors(), require("./routes/payment"));
 app.post('/openai', async (req, res) =>{
   
 })
-app.get('/', async (req, res) =>{
-  res.send("running");
-})
+
 
 
 app.listen(PORT, console.log("Server is running on port ", PORT));
