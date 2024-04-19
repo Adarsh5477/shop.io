@@ -78,9 +78,9 @@ const TalkAI = (props) => {
             wishItemsContext.addItem(newWish)
 
         }
-        if (window.sessionStorage.getItem("newCart")){
-        const newCartItem=JSON.parse(window.sessionStorage.getItem("newCart"))
-        }
+     
+        const newCartItem=JSON.parse(window.sessionStorage.getItem("newCart")?window.sessionStorage.getItem("newCart"):{})
+        
         if(newCartItem){
           let newCart = {
             name: newCartItem.title,
