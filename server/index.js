@@ -47,7 +47,7 @@ manager.addDocument('en', 'Add [product] to my wishlist', 'wishlist.add');
 manager.addDocument('en', 'Add [product] to my cart', 'cart.add');
 
 // Train the NLP manager
-//manager.train();
+manager.train();
 
 //"find me a $color$*red*"item
 // NLP endpoint
